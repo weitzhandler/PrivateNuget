@@ -12,4 +12,8 @@
     <ProjectReference Include="..\PrivateNuget.Package2\PrivateNuget.Package2.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include=".nuget\nuget.config" />
+  </ItemGroup>
+
 </Project>
