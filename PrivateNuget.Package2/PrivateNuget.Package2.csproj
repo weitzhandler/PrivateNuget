@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
+    <PackageId>PrivateNuget.Package2</PackageId>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Version>0.1.0</Version>
     <AssemblyVersion>0.1.0</AssemblyVersion>
