@@ -4,9 +4,13 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <FileVersion>0.0.1</FileVersion>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
     <RepositoryUrl>https://github.com/weitzhandler/PrivateNuget</RepositoryUrl>
+    <Version>0.1.0</Version>
   </PropertyGroup>
 
 </Project>
