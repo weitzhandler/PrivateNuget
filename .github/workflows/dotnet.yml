@@ -37,7 +37,9 @@ jobs:
       
     - name: Publish
       #if: startsWith(github.ref, 'refs/heads/release')
-      run: nuget push "**\*.nupkg" --source "github"
+      #run: nuget push "**\*.nupkg" --source "github" --SkipDuplicated
+      
+      run: dotnet nuget push "**/*.nupkg" --source https://api.nuget.org/v3/index.json --skip-duplicate
       
     #- name: Test
     #  run: dotnet test /p:Configuration=$env:BUILD_CONFIG --no-restore --no-build --verbosity normal
