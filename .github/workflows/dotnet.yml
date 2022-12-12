@@ -43,8 +43,8 @@ jobs:
     - name: Build
       run: dotnet build $SOLUTION --configuration $BUILD_CONFIG -p:version=$BUILD_VERSION --no-restore
       
-    #- name: Publish
-    #  if: startsWith(github.ref, 'refs/heads/release')
-    #  run: 
+    - name: Publish
+      if: startsWith(github.ref, 'refs/heads/release')
+      run: nuget push **\*.nupkg --source "github"
     #- name: Test
     #  run: dotnet test /p:Configuration=$env:BUILD_CONFIG --no-restore --no-build --verbosity normal
