@@ -20,7 +20,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+   
     - name: Setup NuGet
       uses: Nuget/setup-nuget@v1.0.5
 
@@ -34,6 +34,12 @@ jobs:
      
     - name: Build
       run: dotnet build $SOLUTION --configuration $BUILD_CONFIG --no-restore
+      
+    - name: Publish
+      #if: startsWith(github.ref, 'refs/heads/release')
+      #run: nuget push "**\*.nupkg" --source "github" --SkipDuplicated
+      
+      run: dotnet nuget push "**/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key "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" --skip-duplicate
       
     #- name: Test
     #  run: dotnet test /p:Configuration=$env:BUILD_CONFIG --no-restore --no-build --verbosity normal
