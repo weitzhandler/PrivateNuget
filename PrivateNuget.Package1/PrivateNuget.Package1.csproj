@@ -9,6 +9,7 @@
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <AssemblyVersion>0.0.1</AssemblyVersion>
+    <RepositoryUrl>https://github.com/weitzhandler/PrivateNuget</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
