@@ -8,14 +8,8 @@
     <IncludeSymbols>True</IncludeSymbols>
     <PackageId>PrivateNuget.Package2</PackageId>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>0.1.0</Version>
-    <AssemblyVersion>0.1.0</AssemblyVersion>
-    <FileVersion>0.1.0</FileVersion>
+    <PackageVersion>$(PackageVersion)</PackageVersion>
     <RepositoryUrl>https://github.com/weitzhandler/PrivateNuget</RepositoryUrl>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Semver" Version="2.2.0" />
-  </ItemGroup>
-
+  
 </Project>
