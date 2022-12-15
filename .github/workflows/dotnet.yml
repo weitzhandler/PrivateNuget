@@ -18,6 +18,7 @@ jobs:
     env:
       package_version: 0.1.0
       configuration: Release
+      NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     steps:
     - uses: actions/checkout@v3    
