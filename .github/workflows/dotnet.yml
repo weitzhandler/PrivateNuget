@@ -28,7 +28,7 @@ jobs:
         source-url: 'https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json'
         
     - name: Restore dependencies
-      run: dotnet restore --configuration ${{ env.configuration }}
+      run: dotnet restore
 
     - name: Build
       run: dotnet build --configuration ${{ env.configuration }} --no-restore
