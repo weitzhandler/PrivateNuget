@@ -21,7 +21,7 @@ jobs:
       uses: Nuget/setup-nuget@v1.0.5
 
     - name: Restore dependencies
-      run: dotnet restore --source "nuget"
+      run: dotnet restore
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
