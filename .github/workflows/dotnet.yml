@@ -10,26 +10,28 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-  
+  deploy:  
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write  
+    env:
+      package_version: 0.1.0
+      configuration: Release
 
     steps:
-    - uses: actions/checkout@v3
-   
-    - name: Setup NuGet
-      uses: Nuget/setup-nuget@v1.0.5
-
-    - name: Restore dependencies
-      run: dotnet restore
-
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+    - uses: actions/checkout@v3    
+    - uses: nuget/setup-nuget@v3
+    - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
-     
+        source-url: 'https://nuget.pkg.github.com/{{ github.repository_owner }}/index.json'
+        
+    - name: Restore dependencies
+      run: dotnet restore --configuration {{ env.configuration }}
+
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration {{ env.configuration }} --no-restore
       
     - name: Publish
-      run: dotnet nuget push "**/*.nupkg" --source "github"
+      run: dotnet nuget push "**/*.nupkg"
