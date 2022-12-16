@@ -16,7 +16,6 @@ jobs:
       contents: read
       packages: write  
     env:
-      package_version: 0.1.0
       configuration: Release
 
     steps:
