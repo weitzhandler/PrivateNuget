@@ -32,9 +32,7 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --configuration ${{ env.configuration }} --version-suffix --no-restore
+      run: dotnet build --configuration ${{ env.configuration }}
       
     - name: Publish
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: dotnet nuget push  **/*.nupkg --api-key $NUGET_AUTH_TOKEN
+      run: dotnet nuget push  **/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }}
