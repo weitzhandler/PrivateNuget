@@ -8,7 +8,13 @@
     <IncludeSymbols>True</IncludeSymbols>
     <PackageId>PrivateNuget.Package2</PackageId>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageVersion>$(PackageVersion)</PackageVersion>
+
+    <VersionSuffix>0.1.$([System.DateTime]::UtcNow.ToString(mmff))</VersionSuffix>
+    <AssemblyVersion Condition=" '$(VersionSuffix)' == '' ">0.1.0</AssemblyVersion>
+    <AssemblyVersion Condition=" '$(VersionSuffix)' != '' ">$(VersionSuffix)</AssemblyVersion>
+    <Version Condition=" '$(VersionSuffix)' == '' ">0.1.0</Version>
+    <Version Condition=" '$(VersionSuffix)' != '' ">$(VersionSuffix)</Version>
+
     <RepositoryUrl>https://github.com/weitzhandler/PrivateNuget</RepositoryUrl>
   </PropertyGroup>
   
