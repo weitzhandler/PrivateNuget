@@ -37,4 +37,4 @@ jobs:
     - name: Publish
       env:
         NUGET_AUTH_TOKEN: ${{secrets.NUGET_AUTH_TOKEN}}
-      run: dotnet nuget push -k $NUGET_AUTH_TOKEN **/*.nupkg
+      run: dotnet nuget push -k $NUGET_AUTH_TOKEN ./packages/*.nupkg #**/*.nupkg
