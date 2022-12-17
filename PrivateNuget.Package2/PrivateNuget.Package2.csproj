@@ -9,7 +9,9 @@
     <PackageId>PrivateNuget.Package2</PackageId>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
-    <VersionPrefix>0.1.1</VersionPrefix>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <Deterministic>False</Deterministic>
+    <VersionPrefix>0.1.1.x</VersionPrefix>
 
     <RepositoryUrl>https://github.com/weitzhandler/PrivateNuget</RepositoryUrl>
   </PropertyGroup>
