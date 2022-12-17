@@ -9,11 +9,7 @@
     <PackageId>PrivateNuget.Package2</PackageId>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
-    <!--VersionSuffix>0.1.$([MSBuild]::Divide( $([System.DateTime]::UtcNow.AddYears(-2021).Ticks), $([System.TimeSpan]::TicksPerMillisecond)).ToString())</VersionSuffix-->
-    <VersionSuffix>$(Build.BuildNumber)</VersionSuffix>
-    <AssemblyVersion>$(VersionSuffix)</AssemblyVersion>
-    <Version>$(VersionSuffix)</Version>
-    <PackageVersion>$(VersionSuffix)</PackageVersion>
+    <Version>0.1.x</Version>
 
     <RepositoryUrl>https://github.com/weitzhandler/PrivateNuget</RepositoryUrl>
   </PropertyGroup>
