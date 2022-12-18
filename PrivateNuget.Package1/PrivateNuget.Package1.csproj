@@ -9,7 +9,7 @@
     <PackageId>PrivateNuget.Package1</PackageId>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
-    <VersionPrefix>0.1</VersionPrefix>
+    <Version>0.1.$([System.DateTime]::UtcNow.AddYears(-2021).ToString("yMdHms"))</Version>
 
     <RepositoryUrl>https://github.com/weitzhandler/PrivateNuget</RepositoryUrl>
   </PropertyGroup>
